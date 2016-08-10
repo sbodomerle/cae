@@ -1,0 +1,9 @@
+#!/usr/bin/make -f
+
+export DH_GOLANG_EXCLUDES := cae/cae
+
+%:
+	dh $@ --buildsystem=golang --with=golang
+
+override_dh_auto_test:
+	-dh_auto_test

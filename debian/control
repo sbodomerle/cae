@@ -1,0 +1,52 @@
+Source: golang-github-unknwon-cae
+Section: devel
+Priority: extra
+Maintainer: Debian Go Packaging Team <pkg-go-maintainers@lists.alioth.debian.org>
+Uploaders: Sandor Bodo-Merle <sandor.bodo-merle@eli-alps.hu>
+Build-Depends: debhelper (>= 9),
+               dh-golang,
+               golang-go,
+               golang-github-smartystreets-goconvey-dev,
+               golang-github-unknwon-com-dev
+Standards-Version: 3.9.7
+Homepage: https://github.com/Unknwon/cae
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-go/packages/golang-github-unknwon-cae.git
+Vcs-Git: https://anonscm.debian.org/git/pkg-go/packages/golang-github-unknwon-cae.git
+XS-Go-Import-Path: github.com/Unknwon/cae
+
+Package: golang-github-unknwon-cae-dev
+Architecture: all
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+         golang-go,
+         golang-github-smartystreets-goconvey-dev,
+         golang-github-unknwon-com-dev
+Description: Package cae implements PHP-like Compression and Archive Extensions.
+ Compression and Archive Extensions Go Walker
+ (http://gowalker.org/github.com/Unknwon/cae)
+ .
+ 中文文档 (README_ZH.md)
+ .
+ Package cae implements PHP-like Compression and Archive Extensions.
+ .
+ But this package has some modifications depends on Go-style.
+ .
+ Reference: PHP:Compression and Archive Extensions
+ (http://www.php.net/manual/en/refs.compression.php).
+ .
+ Code Convention: based on Go Code Convention
+ (https://github.com/Unknwon/go-code-convention).  Implementations Package
+ zip(Go Walker (http://gowalker.org/github.com/Unknwon/cae/zip)) and tz(Go
+ Walker (http://gowalker.org/github.com/Unknwon/cae/tz)) both enable you to
+ transparently read or write ZIP/TAR.GZ compressed archives and the files
+ inside them.  • Features: • Add file or directory from everywhere
+ to archive, no one-to-one limitation.• Extract part of entries, not
+ all at once.• Stream data directly into io.Writer without any file
+ system storage.Test cases and Coverage All subpackages use GoConvey
+ (http://goconvey.co/) to write test cases, and coverage is more than
+ 80 percent.  Use cases• Gogs (https://github.com/gogits/gogs):
+ self hosted Git service in the Go Programming Language.• GoBlog
+ (https://github.com/fuxiaohei/GoBlog): personal blogging application.•
+ GoBuild (https://github.com/shxsun/gobuild/): online Go cross-platform
+ compilation and download service.License This project is under Apache
+ v2 License. See the LICENSE (LICENSE) file for the full license text.
